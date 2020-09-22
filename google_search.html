@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Search</title>
+		<style>
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+	
+			#mainBody {
+				text-align: center;
+			}
+
+			#otherPages {
+				text-align: right;
+			}
+
+			#mainDiv {
+				display: flex;
+				flex-wrap: wrap;
+				margin: auto;
+				width: 40%;
+				height: 50%;
+				padding: 15%;
+				text-align: center;
+				/*background-color: green;*/
+				/*display: inline-block;*/
+
+			}
+
+			#formDiv {
+				width: 100%;
+				overflow: auto;
+				padding: 2%;
+				/*background-color: red;*/
+			}
+
+			#mainForm {
+				max-width: 100%;
+				max-height:100%;
+				/*display: inline-block;*/
+			}
+
+			#divSearchBar {
+			}
+
+			#divSearchButt {
+				padding: 4%;
+			}
+
+			#searchBar {
+				border-radius: 25px;
+				border-color: #D3D3D3;
+				width: 70%;
+				height: 38px;
+
+				/*background: url("magGlass.png") 5% no-repeat left;*/
+
+				/*box-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;*/
+			}
+
+			#searchBar:hover {		
+				box-shadow: 0 0 3px gray, 0 0 5px gray;		
+			}
+
+			#searchButton, #luckyButton {
+				border-radius: 5px;
+				height: 20px;
+			}
+
+			#luckyButton:clicked {
+			}
+
+		</style>
+    </head>
+	<body id="mainBody">
+		<div id="otherPages">
+			<a href="google_image.html">Images</a>, <a> Advanced Search</a>
+		</div>
+		<div id="mainDiv">
+			<img src="googlelogo_color_272x92dp.png" alt="Google Logo in colors.">
+			<div id="formDiv">
+				<form id="mainForm" action="https://google.com/search">
+					<div id="divSearchBar">
+	        				<input id="searchBar" type="text" name="q">
+					</div>
+					<div id="divSearchButt">
+						<input id="searchButton" type="submit" value="Google Search">
+						<!-- <input id="luckyButton" type="submit" value="Feeling Lucky"> -->
+						<button id="luckyButton" type="button" onclick="myFunction()">Feeling Lucky</button>
+						<script>
+							function myFunction() {
+								var lucky_string = "http://www.google.com/search?q=" + document.getElementById("searchBar").value + "&btnI";
+								window.location = lucky_string;
+							}
+						</script>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+
